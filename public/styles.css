@@ -1,0 +1,146 @@
+body {
+    font-family: 'Arvo';
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background: #f3f3f3;
+    background-image: url("https://images.pexels.com/photos/139306/pexels-photo-139306.jpeg?w=1200&h=627&fit=crop&auto=compress&cs=tinysrgb");
+    background-size: 100%;
+}
+
+/* List */
+nav {
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    /*background-color: black;*/
+    margin-right: auto;
+    margin-left: auto;
+}
+
+nav button {
+    color: white;
+    background-color: black;
+    width: 32%;
+}
+
+.notecard {
+    text-align: center;
+    font-size: 30px;
+    background-image: url("https://openclipart.org/image/2400px/svg_to_png/85279/index-card.png");
+    background-size: 100%;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    vertical-align: middle;
+    grid-template-rows: 1fr 2fr;
+    grid-gap: 25px;
+}
+
+.definition  {
+    resize: none;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    height: 40%;
+    margin-bottom: 10px;
+}
+.word  {
+    height: 10%;
+    font-size: .8em;
+    resize: none;
+    margin-top: 7px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.submit {
+    text-decoration: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.submit:hover {
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.readonly {
+
+}
+
+form {
+    height: 100%;
+}
+
+p{
+    vertical-align: middle;
+    margin-top: 30px;
+}
+
+/* GRID */
+.my_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-flow: row;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    grid-gap: 25px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.delete {
+    display: none;
+    margin: 2px;
+}
+
+li:hover .delete {
+    display: block;
+}
+
+label {
+    width: 400px;
+}
+
+/* Form */
+
+input[type=checkbox], textarea {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+input[type=text], textarea {
+    font-size: 1em;
+}
+
+button  {
+    font-family: 'Arvo';
+    font-size: 1em;
+}
+
+.arrow {
+    /*opacity: 0.1*/
+    background-image: url("https://images.pexels.com/photos/139306/pexels-photo-139306.jpeg?w=1200&h=627&fit=crop&auto=compress&cs=tinysrgb");;
+}
+
+/* Controls */
+
+.controls {
+    margin-top: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    /*color: whitesmoke;*/
+    /*background-color: #f3f3f3;*/
+    width: 100%;
+}

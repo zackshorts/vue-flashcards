@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Vue FlashCard</title>
+</head>
+<body>
+<div id="app">
+    <nav>
+        <button v-on:click="changeToAdd()">Add</button>
+        <button v-on:click="changeToEdit()">Edit</button>
+        <button v-on:click="deleteNotecard()">Delete</button>
+    </nav>
+    <div class="my_grid">
+        <button v-on:click="showPrevCard()" class="arrow"><img src="icons/left_arrow.png" class="leftArrow"/></button>
+        <div class="notecard">
+            <form>
+                <textarea v-model='currentCard.word' :disabled="disabled" type="text" placeholder="Word" class="word">{{currentCard.word}}</textarea><br><br>
+                <textarea v-model='currentCard.definition' :disabled="disabled" type="text" placeholder="Definition" class="definition">{{currentCard.definition}}</textarea><br>
+                <input v-show="seen" v-on:click="submit()" v-bind:class="submit" type="submit" value="Submit">
+            </form>
+        </div>
+        <button v-on:click="showNextCard()" class="arrow"><img src="icons/right_arrow.png" class="rightArrow"/></button>
+    </div>
+
+</div>
+<footer>
+    Look at how I did it on <a href="https://github.com/jbskaggs/Flashcards.git">GitHub</a>!!!
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
