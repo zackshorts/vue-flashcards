@@ -7,6 +7,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static('public'));
 
+// Knex Setup
+const env = process.env.NODE_ENV || 'development';
+const config = require('./knexfile')[env];
+const db = require('knex')(config);
+
 let cards = [{word: 'pomegranate', definition: 'shrub or small tree having large red many-seeded fruit'},
     {word: 'hefty', definition: 'of considerable weight and size'},
     {word: 'lubberly', definition: 'clumsy and unskilled'},
